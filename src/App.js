@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import {Provider} from 'react-redux';
+import CakeContainer from './components/CakeContainer';
+import store from './redux/store';
+
+// Provider is a Higher Order Component that comes from 'react-redux' library
+// Provider wraps other child components
+// So that redux store can be accessed by all the child components
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store = {store}>
+      <div className="App">
+        <CakeContainer/>
+      </div>
+    </Provider>
   );
 }
 
