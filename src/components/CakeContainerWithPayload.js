@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 const CakeContainerWithPayload = (props) => {
     // States
     const [cakeNumber, setCakeNumber] = useState(1);
-    console.log(typeof cakeNumber);
 
     return (
         <div>
