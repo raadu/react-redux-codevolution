@@ -1,6 +1,9 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {buy_cake, add_cake} from '../redux/cake/cakeActions';
 
+// Component where hooks is used
+// useSelector, useDispatch hooks is used instead of
+// mapsStateToProps and mapDispatchToProps
 const HooksContainer = () => {
     // Gets the state using useSelector hook
     const numOfCakes = useSelector(state => state.cake.numOfCakes);

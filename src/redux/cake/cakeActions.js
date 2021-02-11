@@ -7,15 +7,17 @@ import {
 
 // buy_cake action creator
 // function that returns an action object
-export const buy_cake = () => {
+export const buy_cake = (cakeNumber = 1) => {
     return {
-        type: BUY_CAKE
+        type: BUY_CAKE,
+        payload: cakeNumber
     }
 }
 
 // add_cake action creator
-export const add_cake = () => {
+export const add_cake = (cakeNumber = 1) => {
     return {
-        type: ADD_CAKE
+        type: ADD_CAKE,
+        payload: cakeNumber
     }
 }

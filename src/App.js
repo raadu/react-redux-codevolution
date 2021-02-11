@@ -3,6 +3,8 @@ import {Provider} from 'react-redux';
 import CakeContainer from './components/CakeContainer';
 import HooksCakeContainer from './components/HooksCakeContainer';
 import IceCreamContainer from './components/IceCreamContainer';
+import CakeContainerWithPayload from './components/CakeContainerWithPayload';
+import ItemContainer from './components/ItemContainer';
 import store from './redux/store';
 
 // Provider is a Higher Order Component that comes from 'react-redux' library
@@ -15,7 +17,10 @@ function App() {
       <div className="App">
         <CakeContainer/>
         <HooksCakeContainer/>
+        <CakeContainerWithPayload/>
         <IceCreamContainer/>
+        <ItemContainer itemType="cake"/>
+        <ItemContainer itemType="icecream"/>
       </div>
     </Provider>
   );
